@@ -1,0 +1,29 @@
+<h2>Edit Cart</h2>
+<form [formGroup]="cartForm">
+  <div class="cart-form">
+    <label for="name">Name</label>
+    <input id="name" formControlName="name" type="text" />
+  </div>
+
+  <div class="items-section" formArrayName="items" *ngIf="cartForm">
+    <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item">
+      <label for="item-{{i}}">Item {{i + 1}}</label>
+      <input id="item-{{i}}" formControlName="serialNumber" type="text" />
+      <button type="button" (click)="editItem(i)">
+        <fa-icon [icon]="faEdit"></fa-icon>
+      </button>
+      <button type="button" (click)="deleteItem(i)">
+        <fa-icon [icon]="faTrashCan"></fa-icon>
+      </button>
+    </div>
+    <div class="add-item-button">
+      <button type="button" (click)="addItem()">Add Item</button>
+    </div>
+  </div>
+  <button type="button" (click)="onNoClick()">Cancel</button>
+  <button type="button" (click)="onSave()">Save</button>
+</form>
+
+<div>
+    {{this.cartForm.value | json}}
+</div>

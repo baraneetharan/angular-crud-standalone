@@ -1,0 +1,25 @@
+<h2>Cart Form</h2>
+<form [formGroup]="cartForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="name">Name</label>
+    <input id="name" formControlName="name" type="text" />
+  </div>
+  <!-- <button type="button" (click)="addItem()">Add Item</button>
+  <button type="submit">Submit</button> -->
+
+  <div class="button-container">
+    <button type="button" (click)="addItem()">Add Item</button>
+    <button type="submit">Submit</button>
+  </div>
+  
+  <div formArrayName="items">
+    <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i">
+      <label for="item-{{i}}">Item {{i + 1}}</label>
+      <input id="item-{{i}}" formControlName="serialNumber" type="text" />
+      <fa-icon [icon]="faTrashCan" (click)="removeItem(i)"></fa-icon>
+    </div>
+  </div>
+</form>
+
+{{this.cartForm.value | json}}

@@ -1,0 +1,90 @@
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="button"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="button"]:first-of-type {
+  background-color: #dc3545;
+}
+
+button[type="button"]:first-of-type:hover {
+  background-color: #c82333;
+}
+
+.cart-form {
+  margin-bottom: 20px;
+}
+
+.items-section {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.items-section .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.items-section .item label {
+  flex: 1;
+}
+
+.items-section .item input[type="text"] {
+  flex: 2;
+  margin-right: 10px;
+}
+
+.items-section .item button {
+  margin-left: 5px;
+}
+
+.items-section .add-item-button {
+  display: flex;
+  justify-content: flex-end;
+}

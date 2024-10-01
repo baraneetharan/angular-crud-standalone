@@ -1,0 +1,46 @@
+/* General styling for the cart list */
+.cart-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Styling for each cart item */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Styling for the cart name */
+  .cart-item p {
+    flex: 1;
+    margin: 0;
+    padding-right: 10px;
+  }
+  
+  /* Styling for the edit and delete icons */
+  .cart-item a,
+  .cart-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+  }
+  
+  .cart-item fa-icon {
+    font-size: 1.2em;
+    color: #007bff;
+  }
+  
+  .cart-item button fa-icon {
+    color: #dc3545;
+  }
+  

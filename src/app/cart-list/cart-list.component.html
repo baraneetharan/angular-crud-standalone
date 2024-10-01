@@ -1,0 +1,12 @@
+<h2>Cart List</h2>
+<div class="cart-list">
+  <div *ngFor="let cart of carts" class="cart-item">
+    <p>{{ cart.name }}</p>
+    <button (click)="openEditDialog(cart)">
+      <fa-icon [icon]="faEdit"></fa-icon>
+    </button>
+    <button (click)="deleteCart(cart.cartid)">
+      <fa-icon [icon]="faTrashCan"></fa-icon>
+    </button>
+  </div>
+</div>
