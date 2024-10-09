@@ -1,5 +1,5 @@
 form {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -57,6 +57,12 @@ button[type="button"]:first-of-type:hover {
 
 .cart-form {
   margin-bottom: 20px;
+  max-width: 100%; /* Make the form take up the full width of its container */
+  margin: 0 auto;
+  padding: 30px;   /* Increase padding for more space */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
 .items-section {
@@ -87,4 +93,11 @@ button[type="button"]:first-of-type:hover {
 .items-section .add-item-button {
   display: flex;
   justify-content: flex-end;
+}
+::ng-deep .my-form {
+  width: 100%;      /* Make the form take up the full width of the dialog */
+  height: 100%;     /* Make the form take up the full height of the dialog */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
